@@ -16,7 +16,11 @@ public abstract class EasyViewHolder<V> extends RecyclerView.ViewHolder
   private OnItemLongClickListener longClickListener;
 
   public EasyViewHolder(Context context, ViewGroup parent, int layoutId) {
-    super(LayoutInflater.from(context).inflate(layoutId, parent, false));
+    this(LayoutInflater.from(context).inflate(layoutId, parent, false));
+  }
+
+  public EasyViewHolder(View itemView) {
+    super(itemView);
     bindListeners();
   }
 
